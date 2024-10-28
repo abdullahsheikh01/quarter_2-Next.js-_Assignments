@@ -1,14 +1,14 @@
 'use client'
 import { useState } from "react"
 export default function Form(){
-    let [numvalue,setNumValue] = useState();
-    function allowOnlyNumber(e:any) {
+    const [numvalue,setNumValue] = useState("");
+    function allowOnlyNumber(e:React.ChangeEvent<HTMLInputElement>) {
         const numericValueChecker= e.target.value.replace(/[^0-9]/g, "");
         setNumValue(numericValueChecker);
       }
-      let [emailValue,setEmailValue] = useState("");
-      let [Error,setError] = useState("");
-    function emailVerify(e:any){
+      const [emailValue,setEmailValue] = useState("");
+      const [Error,setError] = useState("");
+    function emailVerify(e:React.ChangeEvent<HTMLInputElement>){
         const email = e.target.value;
         setEmailValue(email);
         const emailPattern = /^[a-zA-Z0-9._%+-]+@(gmail\.com|yahoo\.com|outlook\.com|hotmail\.com)$/;
@@ -20,8 +20,8 @@ export default function Form(){
                 domain like gmail.com, yahoo.com, etc.")
         }    
     }
-    let [nameValue,setNameValue] = useState();
-    function nameValueChecker(e:any){
+    const [nameValue,setNameValue] = useState("");
+    function nameValueChecker(e:React.ChangeEvent<HTMLInputElement>){
         const namePatternChecker=e.target.value.replace(/[^a-zA-Z]/g,"");
         setNameValue(namePatternChecker);
     }
@@ -53,12 +53,12 @@ export default function Form(){
             <div className="flex flex-row space-x-16 text-[1.6rem] font-label">
             <div>
             <input type="radio" value="Parent" name="charachter"
-            className="mr-4"/>
+            className="mr-4" required/>
             <span>Parent</span>
             </div>
             <div>
             <input type="radio" value="Student" name="charachter"
-            className="mr-4"/>
+            className="mr-4" required/>
             <span>Student</span>
             </div>
             </div>

@@ -2,14 +2,13 @@
 import { useState } from "react";
 import Image from "next/image";
 import logo from "@/app/images/logo.jpg"
-import { headers } from "next/headers";
 export default function Navbar() {
     const [menuShow,setMenuShow]=useState(false);
     return (
         <header>
         <Image src={logo}
         alt="Logo Of Harmony Valley School"
-    />
+        />
         <nav className={menuShow?"smallMenu":"bigMenu"}>
             <ul>
                 <li>

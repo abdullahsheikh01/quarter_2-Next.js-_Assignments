@@ -1,5 +1,3 @@
-import Image from "next/image";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 export default function Footer(){
     return(
     <footer className="flex flex-col justify-center items-center

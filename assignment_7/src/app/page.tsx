@@ -6,7 +6,7 @@ import AboutUs from "./pages/about_us/page";
 import Programs from "./pages/programs/page";
 import Contact from "./pages/contact/page";
 import Footer from "./pages/footer/page";
-export default function main(){
+export default function Main(){
  useEffect(()=>{
   alert("This website is making for practice. This is completely not relatable to any organization")
  })
